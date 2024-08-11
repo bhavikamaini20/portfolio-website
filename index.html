@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavika Maini</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins';
+            font-size: 22px;
+            overflow-x: hidden;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            padding: 0 20px; /* Add padding for some spacing */
+            background-color: rgb(8, 8, 69);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 13px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: blueviolet;
+            font-size: 1.3rem;
+        }
+        .left {
+            font-size: 1.5em;
+            margin-right: auto;
+        }
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .firstsection > div {
+            width: 40%; /* Increase width of left section */
+        }
+        .rightsection {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rightsection img {
+            width: 70%; /* Decrease width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0, 112, 255, 0.5); /* Blue shadow effect */
+        }
+        .leftsection {
+            font-size: 2.5rem; /* Increase font size */
+            line-height: 1.5; /* Adjust line height for better readability */
+        }
+        .leftsection .purple {
+            color: blueviolet;
+            font-weight: bold;
+        }
+        #element {
+            color: blueviolet;
+        }
+        .secondsection {
+            margin: auto;
+            max-width: 80vw;
+        }
+        footer {
+            background-color: rgb(8, 8, 69);
+        }
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul {
+            list-style: none;
+        }
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer > div {
+            width: 253px;
+        }
+        .f-rights {
+            text-align: center;
+            color: grey;
+            padding: 3px 23px;
+        }
+        .btn {
+            padding: 12px;
+            background-color: rgb(8, 8, 69);
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* Remove underline from link */
+            display: inline-block; /* Make link behave like a button */
+        }
+        .button {
+            padding: 50px 0;
+        }
+        main hr {
+            border: 0;
+            background-color: rgb(188, 131, 241);
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+        .secondsection h1 {
+            font-size: 1.6em;
+        }
+        .timeline {
+            position: relative;
+            margin: 56px 0;
+            padding: 0 20px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: white;
+        }
+        .box {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 80vw;
+            margin-top: 20px; /* Add margin to move the boxes below the horizontal line */
+        }
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin: 0 10px; /* Add margin for spacing */
+        }
+        .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -148px;
+            left: -1px;
+        }
+        .vertical-title {
+            text-align: center;
+            position: relative;
+            width: 250px;top:-55px;
+        }
+        .vertical-title1 {
+            text-align: center;
+            position: relative;
+            width: 250px;top:-35px;
+        }
+        .v-desc {
+            color: grey;
+            width: 170px;
+            font-size: 12px;
+            text-align: center;
+            top:-49px;
+            position: relative;
+        }
+        .v-desc1 {
+            color: grey;
+            width: 170px;
+            font-size: 12px;
+            text-align: center;
+            top:-39px;
+            position: relative;
+        }
+        .g {
+            color: #4285F4;
+        }
+        .gg {
+            color: #4285F4;
+        }
+        .o {
+            color: #EA4335;
+        }
+        .oo {
+            color: #FBBC05;
+        }
+        .l {
+            color: #34A853;
+        }
+        .e {
+            color: #EA4335;
+        }
+        .date {
+            font-size: 13px;
+        }
+        .thirdsection {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center;
+            height: 100%;
+        }
+        .thirdsection img {
+            max-width: 100%;
+            width:80%;
+            height: auto;
+        }
+        .thirdsection-content {
+            display: flex;
+            justify-content: space-between; /* Create space between the two sections */
+            width: 80%; /* Set a maximum width */
+            margin-top: 20px; /* Add margin to separate from the image */
+        }
+        .leftsection1, .rightsection1 {
+            width: 48%; /* Take up equal space */
+        }
+        .forthsection {
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center;
+            height: 100%;
+            margin-top: 20px; /* Add some spacing at the top */
+        }
+        .verticalline {
+            border: 2px solid white;
+            height: 500px;
+            margin: 0 auto; 
+            position: relative;
+            top: -20px;
+        }
+        .c1{
+            border: 2px solid white;
+            height: 0;
+            margin: 0 auto; 
+            position: relative;
+            top: -450px;
+            width:60px;
+            left:-30px;
+        
+        }
+        .c2{
+            border: 2px solid white;
+            height: 0;
+            margin: 0 auto; 
+            position: relative;
+            top: -400px;
+            width:60px;
+            left:30px;
+        
+        }
+        .c3{
+            border: 2px solid white;
+            height: 0;
+            margin: 0 auto; 
+            position: relative;
+            top: -210px;
+            width:60px;
+            left:30px;
+        
+        }
+        .c4{
+            border: 2px solid white;
+            height: 0;
+            margin: 0 auto; 
+            position: relative;
+            top: -370px;
+            width:60px;
+            left:-30px;
+        
+        }
+        .view-certificate {
+        position: relative;
+        width:600px;
+        left:-500px;
+        top:-110px;
+        }
+
+        .fourthsection-content {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center the content vertically */
+            flex-direction: column; /* Align content in a column */
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .fourthsection-content h2 {
+            text-align: center;
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 20px; /* Add margin between heading and line */
+        }
+        .ib{
+            position: relative;
+            top:-80px;
+            left:-85px;
+        }
+        .iib{
+            position: relative;
+            top:-80px;
+            left:65px;
+        }
+        .ibm{
+            position: relative;
+            top:-65px;
+            left:65px;
+        }
+        
+        .python{
+            position: relative;
+            top:-490px;
+            left:-20px;
+        }
+        .python1{
+            position: relative;
+            top:-250px;
+            left:50px;
+        }
+        .python2{
+            position: relative;
+            top:-412px;
+            left:-20px;
+        }
+        .c{
+            position: relative;
+            top:-440px;
+            left:50px;
+        }
+        .a {
+        position: relative;
+        top:-20px;
+        left: -570px;
+        width: 320px; /* Adjust the width as needed */
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; /* Display ellipsis (...) for overflow */
+        }
+        .b {
+        position: relative;
+        top:-20px;
+        left: 150px;
+        width: 320px; /* Adjust the width as needed */
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide overflowing text */
+        text-overflow: ellipsis; /* Display ellipsis (...) for overflow */
+        }
+        .cc{
+            position: relative;
+            top:-20px;
+            left: 135px;
+            width: 320px; /* Adjust the width as needed */
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden; /* Hide overflowing text */
+            text-overflow: ellipsis;
+
+        }
+        .view-certificate1 {
+        position: relative;
+        width:600px;
+        left:150px;
+        top:-110px;
+        }
+        .view-certificate2 {
+        position: relative;
+        width:600px;
+        left:150px;
+        top:-90px;
+        }
+        .hrr{
+            position: relative;
+            top:-200px;
+        }
+        .p1 h1{
+            align-items: center;
+            position: relative;
+            top:-220px;
+            left:650px;
+            font-size: 50px;
+        }
+        .ospic{
+            position:relative;
+            width:75%;
+            height:350px;
+            left:176px;
+            top:-200px;
+        }
+        .left-arrow{
+            width:60px;
+            top:-740px;
+            left:90px;
+            position: relative;
+        }
+        .right-arrow{
+            width:60px;
+            top:-710px;
+            position:relative;
+            left:1275px;
+        }
+        .project-container {
+    position: relative;
+}
+
+.project {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project.active {
+    display: block;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Bhavika's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="#about-section" >About</a></li>
+                    <li><a href="#certifications-section">Certifications</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#footer-section">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, I am <span class="purple">Bhavika</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                
+                <div class="button">
+                    <a href="pdf/resume.pdf" class="btn"  target="_blank" download>Download Resume</a>
+                    <button class="btn">Visit Github</button>
+                </div>
+                
+            </div> 
+            <div class="rightsection">
+                <img src="images/me.jpg" alt="Profile picture">
+            </div>
+
+        </section>
+        <hr>
+        <section class="secondsection">
+            <h1>Clubs And Chapters </h1>
+            <div class="timeline"></div>
+            <div class="box">
+                <div class="vertical-container">
+                    <div class="vertical"></div>
+                    <img src="images/g.png" class="image-top">
+                    <div class="vertical-title">
+                        Women Engineers Program: By <span class="g">G</span><span class="o">o</span><span class="oo">o</span><span class="gg">g</span><span class="l">l</span><span class="e">e</span><br><span class="date">(March 2023-Present)</span>
+                    </div>
+                    <div class="v-desc">
+                        From among 22,000 hopefuls, I emerged triumphant as one of the esteemed top 200, joining the luminous WE Cohort 5, generously supported by Google.
+                    </div>
+                </div>
+                <div class="vertical-container">
+                    <div class="vertical"></div>
+                    <img src="images/gdsc.png" class="image-top" width="23px">
+                    <div class="vertical-title1">
+                        Google Developer Student Clubs<br><span class="date">(July 2023-Present)</span>
+                    </div>
+                    <div class="v-desc1">
+                        We are community groups for students interested in Google technologies, fostering collaboration, skill development and projects. We host events, workshops, and provide resources to empower students in the tech community
+                    </div>
+                </div>
+                <div class="vertical-container">
+                    <div class="vertical"></div>
+                    
+                    <img src="images/fyi.jpeg" class="image-top" >
+                    <div class="vertical-title">
+                        Fraternity of Young Innovators<br><span class="date">(July 2023-Present)</span>
+
+                    </div>
+                    <div class="v-desc">
+                        We bring together innovative and creative young minds, fostering collaboration and an entrepreneurial spirit through workshops and events. Our aim is to empower members to create, learn, and drive positive change for a brighter future.
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <hr>
+        <section class="thirdsection" id="about-section">
+            <img src="images/aboutme.png" alt="About Me Image"><br>
+            <div class="thirdsection-content">
+                <div class="leftsection1">As an aspiring artificial intelligence and robotics engineer, I'm driven by an insatiable curiosity to unravel the intricacies of technology and harness its potential to shape a better world. With a stellar academic record and a tenacious spirit, I'm on an exhilarating journey to push the boundaries of innovation.<br><br>My diverse skill set spans programming languages like Python, Java, C, and C++, coupled with proficiency in web development technologies like HTML, CSS, JavaScript, and ReactJS. I'm also well-versed in essential tools like Git and MATLAB, and have hands-on experience with machine learning libraries like scikit-learn.</div>
+                <div class="rightsection1">Beyond technical prowess, I thrive on cultivating soft skills like leadership, public speaking, empathy, and time management – attributes that have earned me accolades such as being selected for the prestigious WE Cohort 5 by <span class="g">G</span><span class="o">o</span><span class="oo">o</span><span class="gg">g</span><span class="l">l</span><span class="e">e</span> and serving as the Deputy Head Girl during my high school years.<br><br>With a boundless enthusiasm for learning and a drive to excel, I'm eager to contribute my skills and creativity to innovative projects that push the boundaries of what's possible. Let's embark on a journey of discovery and make a lasting impact together.</div>
+            </div>
+        </section> 
+
+        <hr> 
+        <section class="fourthsection" id="certifications-section">
+            <div class="fourthsection-content">
+                <h2>Certifications</h2>
+                <div class="verticalline"></div>
+                <div class="certificate">
+                    <div class="c1">
+                        <span class="a">Python Spoken Tutorial Project at IIT Bombay</span>
+                        <img src="images/iitb.png" width="80px" class="ib">
+                        <div class="view-certificate">
+                            <a href="pdf/python.pdf" target="_blank"><button class="btn">View Certificate</button></a>
+                        </div>
+                    </div>
+                    <div class="python">
+                        <img src="images/python.png" width="30px">
+                    </div>
+                    <div class="c2">
+                        <span class="b">C Project at IIT Bombay</span>
+                        <img src="images/iitb.png" width="80px" class="iib">
+                        <div class="view-certificate1">
+                            <a href="pdf/c.pdf" target="_blank"><button class="btn">View Certificate</button></a>
+                        </div>
+                    </div>
+                    <div class="c">
+                        <img src="images/c.png" width="30px">
+                    </div>
+                    <div class="c3">
+                        <span class="cc">Machine Learning With Python</span>
+                        <img src="images/ibm.png" width="60px" class="ibm">
+                        <div class="view-certificate2">
+                            <a href="pdf/machine.pdf" target="_blank"><button class="btn">View Certificate</button></a>
+                        </div>
+                    </div>
+                    <div class="python1">
+                        <img src="images/python.png" width="30px">
+                    </div>
+                    <div class="c4">
+                        <span class="a">Cpp Spoken Tutorial Project at IIT Bombay</span>
+                        <img src="images/iitb.png" width="80px" class="ib">
+                        <div class="view-certificate">
+                            <a href="pdf/cpp.pdf" target="_blank"><button class="btn">View Certificate</button></a>
+                        </div>
+                    </div>
+                    <div class="python2">
+                        <img src="images/cpp.png" width="40px">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="hrr">
+        <section class="fifthsection" id="projects-section">
+            <div class="project-container">
+                <div class="project p1 active">
+                    <h1>Projects</h1>
+                    <img src="images/os.jpeg" class="ospic">
+                    <h3 style="position: relative; top:-170px; left:170px;"><u>OS-Algorithm Simulator</u></h3>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">All the cpu scheduling algorithms in one place #FCFS #SJF #RoundRobin #SRTF #Priority #CPU Scheduling Algorithm</p>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">The Simulation Website of CPU Scheduling Algorithm is an interactive platform designed to simulate various CPU scheduling algorithms, including First Come First Serve (FCFS), Shortest Job First (SJF), Round Robin (RR), Shortest Remaining Time First (SRTF), Priority, and other popular algorithms.The website provides a user-friendly interface where users can input their own data, including the number of processes, arrival time, burst time, priority, and time quantum.</p>
+                    <a href="https://github.com/bhavikamaini20/OS-algorithm-simulator" style="position: relative;top:-185px;left:530px;" target="_blank">Github</a>
+                </div>
+        
+                <div class="project p2">
+                    <h1 style="position:relative;font-size: 50px; left:650px;top:-220px;">Projects</h1>
+                    <img src="images/dsa.jpg" class="ospic">
+                    <h3 style="position: relative; top:-170px; left:170px;"><u>Facial-Emotion Detection System</u></h3>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">The Emotion Detection System using Deep Learning is an AI application designed to identify human emotions from facial expressions. Using convolutional neural networks (CNNs), the system processes visual inputs to detect emotions like happiness, sadness, anger, and surprise by analyzing facial features.</p>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">Trained on large datasets of labeled facial images, it learns complex patterns to improve accuracy.This technology has practical applications in customer service, mental health monitoring, and human-computer interaction.It can enhance user experience by providing real-time emotional feedback and insights into user behavior.</p>
+                    <a href="/" style="position: relative;top:-185px;left:280px;" target="_blank">Github</a>
+                </div>
+        
+                <div class="project p3">
+                    <h1 style="position:relative;font-size: 50px; left:650px;top:-220px;">Projects</h1>
+                    <img src="images/rental.jpg" class="ospic">
+                    <h3 style="position: relative; top:-170px; left:170px;"><u>Rental Property Management Software</u></h3>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">The Rental Property Management System (RPMS) is a comprehensive database management project designed to streamline the process of managing rental properties. This system serves as a centralized platform where landlords or property managers can efficiently handle various aspects of their rental properties, including tenant information, lease agreements, rent payments, maintenance requests, and property vacancies.</p>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">Through the RPMS, users can easily track rental income, monitor expenses, and generate financial reports to gain insights into their property portfolio's performance.</p>
+                    <a href="/" style="position: relative;top:-185px;left:790px;" target="_blank">Github</a>
+                </div>
+        
+                <div class="project p4">
+                    <h1 style="position:relative;font-size: 50px; left:650px;top:-220px;">Projects</h1>
+                    <img src="images/toll.jpg" class="ospic">
+                    <h3 style="position: relative; top:-170px; left:170px;"><u>Automated Toll Gate System using Arduino and RFID</u></h3>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">The Automated Toll Gate System utilizing Arduino and RFID technology offers an innovative solution for modernizing toll collection processes.By integrating Arduino microcontrollers with RFID (Radio Frequency Identification) technology, this project aims to automate toll gate operations, enhancing efficiency and reducing congestion at toll plazas.</p>
+                    <p style="position: relative; width:80%; left:160px;top:-150px;">This eliminates the need for manual toll collection, reducing human intervention and speeding up the toll payment process. Real-time monitoring and logging of transactions enable efficient toll management, while the use of RFID technology ensures secure and accurate identification of vehicles.</p>
+                    <a href="https://github.com/your-repo/project4" style="position: relative;top:-185px;left:1080px;" target="_blank">Github</a>
+                </div>
+            </div>
+            <img class="left-arrow" src="images/left-arrow.png">
+            <img class="right-arrow" src="images/right-arrow.png">
+            
+        </section>
+        
+        
+        
+
+        
+        
+    </main>
+
+    <footer id="footer-section">
+        <div class="footer">
+            <div class="f-first">
+                <h3> Bhavika's Developer Portfolio</h3>
+            </div>
+            <div class="f-second">
+                <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Certifications</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="#footer-section">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="f-third" style="position:relative;top:40px;">
+                
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/bhavika-maini-95b165260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="_blank">Linkedin</a></li>
+                    <li><a href="https://github.com/bhavikamaini20" target="_blank">Github</a></li>
+                    
+                </ul>
+                <img src="images/linkdn.png" style="width:100px; position:relative;top:-70px;left:-100px;"> 
+                <img src="images/github.png" style="width:30px; position:relative;top:-40px;left:-140px;"> 
+            </div>
+            <div class="f-fourth" style="position:relative;top:40px;">
+                
+                <ul>
+                    <li>bhavika.maini@gmail.com</li>
+                    <li>+91 9116100889</li>
+                    
+                </ul>
+                <img src="images/mail.png" style="width:30px; position:relative;top:-70px;left:-40px;"> 
+                <img src="images/phone.png" style="width:30px; position:relative;top:-35px;left:-70px; border-radius: 30px;"> 
+            </div>
+        </div>
+        <hr>
+        <div class="f-rights">
+            www.bhavikasportfolio.com  | &copy All Rights Reserved
+            <hr>
+        </div>
+    </footer>
+    
+    
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['App Developer', 'UI/UX ML Developer','Web Developer'],
+          typeSpeed: 50,
+        });
+
+        // Smooth scroll to "About" section
+        document.querySelector('nav ul li a[href="#about-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about-section').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelector('nav ul li a[href="#footer-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#footer-section').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelector('nav ul li a[href="#about-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#projects-section').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelector('nav ul li a[href="#certifications-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#certifications-section').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+        let currentProject = 0;
+        const projects = document.querySelectorAll('.project');
+        const totalProjects = projects.length;
+
+        function showProject(index) {
+            projects.forEach((project, i) => {
+                project.classList.remove('active');
+                if (i === index) {
+                    project.classList.add('active');
+                }
+            });
+        }
+
+        document.querySelector('.left-arrow').addEventListener('click', function() {
+            currentProject = (currentProject === 0) ? totalProjects - 1 : currentProject - 1;
+            showProject(currentProject);
+        });
+
+        document.querySelector('.right-arrow').addEventListener('click', function() {
+            currentProject = (currentProject === totalProjects - 1) ? 0 : currentProject + 1;
+            showProject(currentProject);
+        });
+
+        // Show the first project initially
+        showProject(currentProject);
+    });
+    </script>
+</body>
+</html>
